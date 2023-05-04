@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma za naručivanje</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body background="photos/photo4.jpg" class="background">
+
+    <div>
+    <h2 class="title">Forma za naručivanje</h2>
+</div>
+    <br>
+<div class="form" id="forma">
+    <form>
+        <label for="name">Ime i prezime:</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Unesite Vaše ime i prezime" required oninput="validateName()">
+        <p id="message1"></p> <br>
+        <label for="phone">Telefon:</label>
+        <br>
+        <input type="number" name="phone" id="phone" placeholder="Unesite broj telefona" required oninput="validatePhone()">
+        <p id="message2"></p><br>
+        <label for="address">Adresa:</label>
+        <br>
+        <input type="text" name="address" id="address" placeholder="Unesite adresu za dostavu" required>
+        <br><br>
+        <label for="homeNumber">Broj kuće/stana:</label>
+        <br>
+        <input type="text" name="homeNumber" id="homeNumber" placeholder="Unesite broj kuće ili stana" required>
+        <br><br>
+        <label for="postNumber">Poštanski broj:</label>
+        <br>
+        <input type="number" name="postNumber" id="postNumber" placeholder="Unesite poštanski broj" required>
+        <br><br>
+        <label for="place">Mjesto:</label>
+        <br>
+        <input type="text" name="place" id="place" placeholder="Unesite mjesto dostave" required>
+        <br><br>
+        <label for="email">E-mail adresa:</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Unesite e-mail adresu" required oninput="validateEmail()">
+        <p id="message3"></p>
+        <br><br>
+        <label for="payment">Označite način plaćanja:</label>
+        <select required class="options">
+            <option></option>
+            <option value="card">kreditnom karticom</option>
+            <option value="cash">gotovinom pri preuzimanju</option>
+            <option value="virman">virmansko plaćanje na rate</option>
+          </select>
+        <br><br>
+        <label for="remark">Dodatne napomene:</label>
+        <br>
+        <textarea name="remark" id="remark" cols="10" rows="10"placeholder="Ukoliko imate dodatne napomene za dostavu, molimo da ih upišete ovdje."></textarea>
+        <br><br>
+        <button type="order" class="order" onclick="validateForm()"><b>Naruči</b></button>
+         <br>
+</div>
+    </form>
+    <p class="info">Ukoliko imate problema pri naručivanju, možete nas kontaktirati na broj telefona:<b>001/111-222</b></p>
+            <br><br>
+<script src="js/script.js"></script>
+</body>
+</html>
+</body>
+</html>
